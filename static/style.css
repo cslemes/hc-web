@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap');
+
+.medieval-theme {
+    background-color: #1a1a1a;
+    color: #d4d4a4;
+    font-family: 'IM Fell English', serif;
+    padding: 40px;
+    min-height: 100vh;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.medieval-theme::before,
+.medieval-theme::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath fill='%23ffc107' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3C/svg%3E");
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.medieval-theme::before {
+    top: -100px;
+    left: -100px;
+    transform: rotate(30deg);
+}
+
+.medieval-theme::after {
+    bottom: -100px;
+    right: -100px;
+    transform: rotate(-30deg);
+}
+
+.medieval-theme h1 {
+    font-size: 4rem;
+    color: #ffc107;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+    display: inline-block;
+}
+
+.medieval-theme h1::before,
+.medieval-theme h1::after {
+    content: "❧";
+    font-size: 2rem;
+    color: #e0a500;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.medieval-theme h1::before {
+    left: -40px;
+}
+
+.medieval-theme h1::after {
+    right: -40px;
+}
+
+.medieval-theme .wizard-icon {
+    font-size: 6rem;
+    display: block;
+    margin: 20px auto;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.medieval-theme p {
+    font-size: 1.25rem;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.medieval-theme h2 {
+    font-size: 2.5rem;
+    color: #e0a500;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.medieval-theme h2::before,
+.medieval-theme h2::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    background-color: #e0a500;
+    top: 50%;
+    width: 50px;
+}
+
+.medieval-theme h2::before {
+    right: 100%;
+    margin-right: 15px;
+}
+
+.medieval-theme h2::after {
+    left: 100%;
+    margin-left: 15px;
+}
+
+.medieval-theme ol {
+    list-style-type: none;
+    counter-reset: medieval-counter;
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-left: 0;
+}
+
+.medieval-theme ol li {
+    counter-increment: medieval-counter;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 40px;
+}
+
+.medieval-theme ol li::before {
+    content: counter(medieval-counter);
+    color: #ffc107;
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #333;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ffc107;
+}
+
+.medieval-theme a.twitch-link {
+    color: #4db8ff;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.medieval-theme a.twitch-link:hover {
+    color: #3399ff;
+}
+
+.medieval-theme a.twitch-link::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #3399ff;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+}
+
+.medieval-theme a.twitch-link:hover::after {
+    transform: scaleX(1);
+}
+
+.medieval-theme .command {
+    background-color: #333333;
+    color: #ffdd57;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-family: 'Courier New', monospace;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.medieval-theme .command::beforeL {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.medieval-theme .command:hover::before {
+    opacity: 1;
+}
+
+.medieval-theme .highlight {
+    font-weight: bold;
+    color: #ffc107;
+    position: relative;
+    display: inline-block;
+}
+
+.medieval-theme .highlight::before,
+.medieval-theme .highlight::after {
+    content: "✦";
+    font-size: 0.8em;
+    vertical-align: super;
+    color: #e0a500;
+}
+
+.medieval-theme .highlight::before {
+    margin-right: 5px;
+}
+
+.medieval-theme .highlight::after {
+    margin-left: 5px;
+}
+
+.medieval-theme h3 {
+    color: #ffc107;
+    font-size: 2rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.character-form {
+    margin-bottom: 30px;
+    background-color: rgba(51, 51, 51, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 193, 7, 0.3);
+}
+
+.input-text {
+    padding: 10px;
+    border: 2px solid #ffc107;
+    border-radius: 5px;
+    background-color: #333;
+    color: #d4d4a4;
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 10px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-text:focus {
+    outline: none;
+    border-color: #e0a500;
+    box-shadow: 0 0 5px rgba(224, 165, 0, 0.5);
+}
+
+.btn {
+    padding: 10px 15px;
+    background-color: #ffc107;
+    border: none;
+    border-radius: 5px;
+    color: #1a1a1a;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.btn:hover {
+    background-color: #e0a500;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.medieval-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 20px;
+    background-color: #2a2a2a;
+    color: #d4d4a4;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(255, 193, 7, 0.2);
+}
+
+.medieval-table th,
+.medieval-table td {
+    padding: 15px;
+    border: 1px solid #ffc107;
+    text-align: left;
+}
+
+.medieval-table th {
+    background-color: #333;
+    color: #ffc107;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.medieval-table tr:nth-child(even) {
+    background-color: #333;
+}
+
+.medieval-table tr:hover {
+    background-color: #444;
+    transition: background-color 0.3s;
+}
+
+@media (min-width: 768px) {
+    .medieval-theme h1 {
+        font-size: 6rem;
+    }
+
+    .medieval-theme h2 {
+        font-size: 3rem;
+    }
+
+    .medieval-theme p {
+        font-size: 1.5rem;
+    }
+
+    .medieval-theme .wizard-icon {
+        font-size: 8rem;
+    }
+
+    .medieval-theme h1::before,
+    .medieval-theme h1::after {
+        font-size: 3rem;
+    }
+
+    .medieval-theme h1::before {
+        left: -60px;
+    }
+
+    .medieval-theme h1::after {
+        right: -60px;
+    }
+}

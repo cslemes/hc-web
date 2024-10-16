@@ -1,0 +1,162 @@
+/* Global Medieval Theme */
+.medieval-theme {
+    background-color: #1a1a1a;
+    /* Dark gray background */
+    color: #d4d4a4;
+    /* Parchment-like text color */
+    font-family: 'IM Fell English', serif;
+    /* Medieval serif font */
+    padding: 40px;
+    min-height: 100vh;
+    text-align: center;
+}
+
+/* Title Styling */
+.medieval-theme h1 {
+    font-size: 4rem;
+    color: #ffc107;
+    /* Gold-like color */
+    margin-bottom: 20px;
+}
+
+/* Wizard Icon */
+.medieval-theme .wizard-icon {
+    font-size: 6rem;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Paragraph */
+.medieval-theme p {
+    font-size: 1.25rem;
+    margin-bottom: 40px;
+}
+
+/* Headings */
+.medieval-theme h2 {
+    font-size: 2.5rem;
+    color: #e0a500;
+    /* A strong yellow */
+    margin-bottom: 15px;
+}
+
+/* Ordered List Styling */
+.medieval-theme ol {
+    list-style-type: decimal;
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Links */
+.medieval-theme a.twitch-link {
+    color: #4db8ff;
+    /* Twitch blue */
+    text-decoration: underline;
+}
+
+.medieval-theme a.twitch-link:hover {
+    color: #3399ff;
+    /* Hover effect */
+}
+
+/* Code Commands */
+.medieval-theme .command {
+    background-color: #333333;
+    /* Dark background */
+    color: #ffdd57;
+    /* Magical golden text */
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-family: 'Courier New', monospace;
+    /* Command-like font */
+}
+
+/* Highlighted Text */
+.medieval-theme .highlight {
+    font-weight: bold;
+    color: #ffc107;
+    /* Highlight with gold */
+}
+
+/* Responsive Text Adjustments */
+@media (min-width: 768px) {
+    .medieval-theme h1 {
+        font-size: 6rem;
+    }
+
+    .medieval-theme h2 {
+        font-size: 3rem;
+    }
+
+    .medieval-theme p {
+        font-size: 1.5rem;
+    }
+
+    .medieval-theme .wizard-icon {
+        font-size: 8rem;
+    }
+}
+
+/* Headings */
+
+.medieval-theme h3 {
+    color: #ffc107;
+}
+
+/* Character Form */
+.character-form {
+    margin-bottom: 30px;
+}
+
+.input-text {
+    padding: 10px;
+    border: 2px solid #ffc107;
+    border-radius: 5px;
+    background-color: #333;
+    color: #d4d4a4;
+    font-size: 1rem;
+}
+
+.btn {
+    padding: 10px 15px;
+    background-color: #ffc107;
+    border: none;
+    border-radius: 5px;
+    color: #1a1a1a;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #e0a500;
+}
+
+/* Table Styling */
+.medieval-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #2a2a2a;
+    color: #d4d4a4;
+}
+
+.medieval-table th,
+.medieval-table td {
+    padding: 10px;
+    border: 1px solid #ffc107;
+    text-align: left;
+}
+
+.medieval-table th {
+    background-color: #333;
+    color: #ffc107;
+}
+
+.medieval-table tr:nth-child(even) {
+    background-color: #333;
+}
+
+.medieval-table tr:hover {
+    background-color: #444;
+}

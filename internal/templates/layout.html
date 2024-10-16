@@ -1,0 +1,72 @@
+{{define "layout"}}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heroes of Cube</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+    <script src="https://unpkg.com/htmx.org@1.9.6"></script>
+    <style>
+        body {
+            background-image: url('/static/images/parchment-texture.jpg');
+            /* Medieval parchment background */
+            background-size: cover;
+            background-attachment: fixed;
+            color: #d4d4a4;
+            /* Parchment-like text color */
+            font-family: 'IM Fell English', serif;
+        }
+
+        header {
+            background-color: #333;
+            color: #ffc107;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 4px solid #e0a500;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: #ffc107;
+            padding: 10px;
+            text-align: center;
+            border-top: 4px solid #e0a500;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        main {
+            padding: 40px;
+            min-height: calc(100vh - 160px);
+            /* Adjusts for header and footer */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Heroes of Cube</h1>
+    </header>
+    <main>
+        {{template "content" .}}
+    </main>
+    <footer>
+        <p>&copy; 2023 Heroes of Cube</p>
+    </footer>
+</body>
+
+</html>
+{{end}}
