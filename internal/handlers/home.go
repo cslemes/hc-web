@@ -1,8 +1,9 @@
 package handlers
 
 import (
-	"heroes-cube-web/internal/templates"
 	"net/http"
+
+	"github.com/cslemes/heroes-cube-web/internal/templates"
 )
 
 func Home() http.HandlerFunc {

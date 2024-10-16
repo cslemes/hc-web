@@ -4,9 +4,9 @@ import (
 	"log"
 	"net/http"
 
-	"heroes-cube-web/internal/database"
-	"heroes-cube-web/internal/handlers"
-	"heroes-cube-web/internal/templates"
+	"github.com/cslemes/heroes-cube-web/internal/database"
+	"github.com/cslemes/heroes-cube-web/internal/handlers"
+	"github.com/cslemes/heroes-cube-web/internal/templates"
 
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"

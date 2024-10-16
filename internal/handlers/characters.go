@@ -1,10 +1,11 @@
 package handlers
 
 import (
-	"heroes-cube-web/internal/database"
-	"heroes-cube-web/internal/models"
-	"heroes-cube-web/internal/templates"
 	"net/http"
+
+	"github.com/cslemes/heroes-cube-web/internal/database"
+	"github.com/cslemes/heroes-cube-web/internal/models"
+	"github.com/cslemes/heroes-cube-web/internal/templates"
 )
 
 func Characters(db *database.DB) http.HandlerFunc {

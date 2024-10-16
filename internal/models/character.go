@@ -1,6 +1,6 @@
 package models
 
-import "heroes-cube-web/internal/database"
+import "github.com/cslemes/heroes-cube-web/internal/database"
 
 type CharacterViewModel struct {
 	ID     int64
@@ -9,7 +9,7 @@ type CharacterViewModel struct {
 	Class  string
 	Damage int64
 	Level  int64
-	Points int64 
+	Points int64
 }
 
 func CharacterToViewModel(c database.Character) CharacterViewModel {
@@ -20,7 +20,7 @@ func CharacterToViewModel(c database.Character) CharacterViewModel {
 		Class:  c.Class,
 		Damage: c.Damage,
 		Level:  c.Level,
-		Points: fetchPointsFromAPI(c.ID),
+		//Points: fetchPointsFromAPI(c.ID),
 	}
 }
 
@@ -71,7 +71,7 @@ func SlotsToViewModel(slots []database.Slot) []SlotViewModel {
 }
 
 // You'll need to implement this function to fetch points from your external API
-func fetchPointsFromAPI(characterID int64) int64 {
-	// Implement the API call here
-	return 0 // Placeholder return
-}
+// func fetchPointsFromAPI(characterID int64) int64 {
+// 	// Implement the API call here
+// 	return 0 // Placeholder return
+// }

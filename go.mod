@@ -1,10 +1,9 @@
-module heroes-cube-web
+module github.com/cslemes/heroes-cube-web
 
-go 1.23.0
-
-require github.com/go-chi/chi/v5 v5.1.0
+go 1.23.1
 
 require (
+	github.com/go-chi/chi/v5 v5.1.0
 	github.com/joho/godotenv v1.5.1
 	github.com/tursodatabase/go-libsql v0.0.0-20241011135853-3effbb6dea5c
 )
