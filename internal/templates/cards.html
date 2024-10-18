@@ -1,0 +1,14 @@
+{{ define "cards" }}
+<div class="flex flex-row flex-wrap justify-start gap-4 mx-4 my-4">
+    {{ range .Cards }}
+    <div class="card bg-amber-900 w-60 shadow-xl hover:brightness-150">
+        <figure>
+            <img src="{{ .Image }}" alt="{{ .Race }}" />
+        </figure>
+        <div class="card-body">
+            <h2 class="card-title">{{ .Race }}</h2>
+        </div>
+    </div>
+    {{ end }}
+</div>
+{{ end }}

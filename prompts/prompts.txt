@@ -1,0 +1,83 @@
+Model: flux1-dev-fp8.safetensors
+
+Raças: dwarf | elf | hobbit | human | poney
+Classes: mage | thief | warrior | bard | cleric
+
+
+Wizard:
+
+This human wizard appears with a mysterious and scholarly air, wearing a deep purple robe and a wide-brimmed 
+hat that casts shadows across his face. He has dark, wavy hair and a well-kept beard, with sharp facial features 
+partially obscured by a pair of round, academic glasses. In his hands, he holds an ornate pocket watch,
+its Roman numerals visible, adding an air of time manipulation or arcane knowledge. Behind him, 
+vivid flames of orange and purple swirl, casting an ominous and magical glow, 
+suggesting immense power or control over fire and time. 
+His calm and serious expression indicates both wisdom and deep concentration, 
+hinting at the presence of formidable magical abilities.
+
+
+Dwarf Mage Man:
+
+A stout dwarf mage with a long, flowing beard, wearing dark, rune-etched robes and a hood.
+His eyes glow faintly with magical energy, and he holds a gnarled wooden staff topped with a glowing crystal. 
+The dwarf stands in a shadowy dungeon, with stone walls covered in moss and ancient carvings.
+Magical runes float around him, and faint embers of fire swirl at his feet.
+His expression is stern but wise, showing the strength and mystical power of a seasoned battle mage. 
+The lighting is dim, with eerie magical hues illuminating the scene.
+
+Elf Warrior Man:
+
+A tall and agile elf warrior, clad in sleek, intricately designed leather armor with silver accents, 
+standing ready for battle. His long, sharp ears and piercing green eyes hint at his keen senses. 
+He wields a curved elven sword, glowing faintly with ancient magic,
+and a round wooden shield engraved with forest symbols. 
+His hair flows behind him as he stands in a dimly lit dungeon corridor, surrounded by crumbling stone walls 
+covered in vines. 
+A faint light from distant torches reflects off his armor,
+casting shadows that accentuate his graceful yet fierce posture. 
+His expression is calm and determined, ready to face any foe in the dark depths.
+
+
+Hobbit bard Man:
+
+A seasoned hobbit bard with weathered features, his dark, curly hair framing a determined face. 
+He wears a travel-worn leather vest over a simple tunic, his clothing faded from long journeys through perilous
+dungeons. In one hand, he clutches a well-used lute, the wood etched with runes and scars from past adventures.
+A small dagger rests at his side, hinting at his readiness for danger. He stands in a busy tavern, with tables of wood.
+some people are there, dwarf, elf,hobbit,human drink hidromel and talking aloud . 
+The soft glow of magical notes drift from his lute, casting a faint light on the cold stone beneath his feet. 
+His expression is calm yet resolute, reflecting the wisdom of a bard who has not only sung of battles but survived 
+them. The air hums with a faint melody, blending with the eerie silence of the dungeon, where both music and danger 
+lurk in the shadows. little cartoony style
+
+
+
+Elf Warrior Fem:
+
+A Beautiful warrior archery elf riding a ferocious wolf with big teeth, long hair, red hair,
+angry, high heel boots, thighhighs, medium breasts, crossbow, holding a crossbow, in attack position . 
+Outdoors, tree, night, night sky, moon, full moon. 
+Ultra sharp detail, flawless composition, muted natural colors.
+
+Human Cleric:
+A resolute human cleric clad in heavy, intricately crafted armor, worn and scratched from countless battles.
+Over his chestplate, he wears a tabard emblazoned with a faded holy symbol, glowing faintly with divine energy.
+His eyes shine with conviction, and his stern expression reflects the weight of his sacred duty. 
+In one hand, he grips a tall, silver warhammer adorned with sacred runes, and in the other, a glowing holy relic, 
+casting a warm, golden light that pushes back the dungeon's darkness. The stone walls around him are marked
+with ancient sigils, and faint whispers of divine power fill the air. Despite the grim surroundings, 
+a sense of protection and resolve emanates from him, as though no evil could withstand the divine light
+that surrounds him. His presence is a beacon of hope in the shadowy dungeon, where his faith and strength
+stand as a bulwark against the darkness
+
+
+Poney thief
+A sleek and agile unicorn, unlike any of its kind, with a shimmering silver coat that blends seamlessly into theshadows of the dungeon. 
+Its single, sharp horn is adorned with faintly glowing runes, pulsing with arcane power.
+The unicorn’s eyes gleam with mischief and cunning, hinting at the clever tricks it has up its sleeve. 
+Small pouches and straps hang from its sides, filled with stolen treasures and mysterious artifacts.
+Its hooves make no sound as it moves gracefully through the dimly lit corridors, dodging traps and slipping past guards with ease. 
+The dungeon's flickering torchlight catches only glimpses of its flowing, ethereal mane and tail, 
+which shimmer with a faint, magical glow. 
+A sense of mystery surrounds the creature, a legendary figure among thieves, able to disappear into the shadows 
+as easily as it appears, leaving only the faintest trace of magic in its wake. cartoony

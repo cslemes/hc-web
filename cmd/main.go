@@ -1,47 +1,46 @@
 package main
 
 import (
-	"log"
-	"net/http"
+	"github.com/cslemes/hc-web/internal/handlers"
 
-	"github.com/cslemes/heroes-cube-web/internal/database"
-	"github.com/cslemes/heroes-cube-web/internal/handlers"
-	"github.com/cslemes/heroes-cube-web/internal/templates"
+	"github.com/cslemes/hc-web/internal/utils"
+	"github.com/cslemes/hc-web/internal/views"
 
-	"github.com/go-chi/chi/v5"
-	"github.com/go-chi/chi/v5/middleware"
+	"github.com/labstack/echo/v4"
+	"github.com/labstack/echo/v4/middleware"
 )
 
 func main() {
 
-	dbName := "heroes.db"
+	e := echo.New()
 
-	if err := templates.Init(); err != nil {
-		log.Fatal(err)
-	}
+	e.Use(middleware.Logger())
 
-	db, err := database.Open(dbName)
-	//db, err := database.Open("./heroes.db")
-	if err != nil {
-		log.Fatal(err)
-	}
-	defer db.Close()
+	e.Renderer = views.NewTemplates()
 
-	// Create router
-	r := chi.NewRouter()
+	e.GET("/", func(c echo.Context) error {
+		return c.Render(200, "layout", nil)
+	})
 
-	// Middleware
-	r.Use(middleware.Logger)
-	r.Use(middleware.Recoverer)
+	e.GET("/home", func(c echo.Context) error {
+		return c.Render(200, "home", nil)
+	})
+	e.GET("/characters", func(c echo.Context) error {
+		return c.Render(200, "characters", nil)
+	})
+	e.GET("/under", func(c echo.Context) error {
+		return c.Render(200, "under", nil)
+	})
 
-	// Serve static files
-	r.Handle("/static/*", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
+	//	e.GET("/characters", handlers.Characters())
 
-	// Routes
-	r.Get("/", handlers.Home())
-	r.Get("/characters", handlers.Characters(db))
+	e.GET("/cards", handlers.Cards())
 
-	// Start server
-	log.Println("Server starting on http://localhost:8080")
-	log.Fatal(http.ListenAndServe(":8080", r))
+	e.Static("/static/", "public")
+
+	conf := utils.AppConfig()
+	port := conf.Server.Port
+
+	e.Logger.Printf("Server starting on http://localhost:%s", port)
+	e.Logger.Fatal(e.Start(":" + port))
 }

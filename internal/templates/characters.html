@@ -1,58 +1,73 @@
-{{define "content"}}
-<h1>Personagens</h1>
-<form hx-get="/characters" hx-target="#character-info">
-    <input type="text" name="name" placeholder="Seu nick na Twitch">
-    <button type="submit">Buscar</button>
-</form>
+{{define "characters" }}
+<div class="container mx-auto p-6 min-h-screen" id="home-container">
+    <h1 class="text-4xl font-bold mb-6">Personagens</h1>
+    <form hx-get="/under" hx-target="#character-info" hx-swap="innerHTML" class="form-control">
+        <div class="input-group">
+            <input type="text" name="name" placeholder="Seu nick na Twitch" class="input input-bordered" />
+            <button type="submit" class="btn btn-primary">Buscar</button>
+        </div>
+    </form>
 
-<div id="character-info">
-    {{if .Character}}
-    <h2>{{.Character.Name}}</h2>
-    <p>Cubos: {{.Character.Points}}</p>
-    <p>Raça: {{.Character.Race}} | Classe: {{.Character.Class}}</p>
-    <p>Dano: {{.Character.Damage}} | Level: {{.Character.Level}}</p>
+    <div id="character-info" class="mt-6">
+        {{if .Character}}
+        <div class="card w-full bg-base-100 shadow-xl">
+            <div class="card-body">
+                <h2 class="card-title">{{.Character.Name}}</h2>
+                <p><strong>Cubos:</strong> {{.Character.Points}}</p>
+                <p><strong>Raça:</strong> {{.Character.Race}} | <strong>Classe:</strong> {{.Character.Class}}</p>
+                <p><strong>Dano:</strong> {{.Character.Damage}} | <strong>Level:</strong> {{.Character.Level}}</p>
+                <h3 class="text-lg font-bold mt-4">Equipamentos</h3>
+                <table class="table w-full">
+                    <thead>
+                        <tr>
+                            <th>Slot</th>
+                            <th>Nome</th>
+                            <th>Dano</th>
+                            <th>Preço</th>
+                            <th>Classe</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{range .Slots}}
+                        <tr>
+                            <td>{{.Slot}}</td>
+                            <td>{{.Name}}</td>
+                            <td>{{.Damage}}</td>
+                            <td>{{.Price}}</td>
+                            <td>{{.Class}}</td>
+                        </tr>
+                        {{end}}
+                    </tbody>
+                </table>
 
-    <h3>Equipamentos</h3>
-    <table>
-        <tr>
-            <th>Slot</th>
-            <th>Nome</th>
-            <th>Dano</th>
-            <th>Preço</th>
-            <th>Classe</th>
-        </tr>
-        {{range .Slots}}
-        <tr>
-            <td>{{.Slot}}</td>
-            <td>{{.Name}}</td>
-            <td>{{.Damage}}</td>
-            <td>{{.Price}}</td>
-            <td>{{.Class}}</td>
-        </tr>
+                <h3 class="text-lg font-bold mt-4">Inventário</h3>
+                <table class="table w-full">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>Dano</th>
+                            <th>Preço</th>
+                            <th>Classe</th>
+                            <th>Quantidade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{range .Inventory}}
+                        <tr>
+                            <td>{{.ID}}</td>
+                            <td>{{.Name}}</td>
+                            <td>{{.Damage}}</td>
+                            <td>{{.Price}}</td>
+                            <td>{{.Class}}</td>
+                            <td>{{.Quantity}}</td>
+                        </tr>
+                        {{end}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
         {{end}}
-    </table>
-
-    <h3>Inventário</h3>
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>Nome</th>
-            <th>Dano</th>
-            <th>Preço</th>
-            <th>Classe</th>
-            <th>Quantidade</th>
-        </tr>
-        {{range .Inventory}}
-        <tr>
-            <td>{{.ID}}</td>
-            <td>{{.Name}}</td>
-            <td>{{.Damage}}</td>
-            <td>{{.Price}}</td>
-            <td>{{.Class}}</td>
-            <td>{{.Quantity}}</td>
-        </tr>
-        {{end}}
-    </table>
-    {{end}}
+    </div>
 </div>
 {{end}}

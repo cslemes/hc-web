@@ -1,5 +1,17 @@
 # Simple Makefile for a Go project
-.PHONY: all build run clean
+
+# export CGO_ENABLED=0
+
+
+DB_URL=./heroes.db
+
+MIGRATIONS_DIR=./sql/schema
+
+FRONTEND_DIR=./frontend
+
+
+
+.PHONY: all build run clean test deps migrate-up migrate-down migrate-status create-migration generate-sqlc setup-db env build-frontend
 
 
 all: build
@@ -24,7 +36,7 @@ test:
 # Clean the binary
 clean:
 	@echo "Cleaning..."
-	@rm -f main
+	@rm -f hc_web
 
 # Live Reload
 watch:
@@ -44,11 +56,9 @@ watch:
 	fi
 
 
-DB_URL=./heroes.db
 
-MIGRATIONS_DIR=./sql/schema
-
-.PHONY: migrate-up migrate-down migrate-status create-migration
+generate-sqlc:
+	sqlc generate
 
 migrate-up:
 	goose -dir $(MIGRATIONS_DIR) sqlite3 $(DB_URL) up

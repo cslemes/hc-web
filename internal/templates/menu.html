@@ -1,0 +1,9 @@
+{{define "menu"}}
+<div class="my-1 mx-auto">
+    <ul class="menu menu-horizontal lg:menu-horizontal bg-base-200 rounded-box shadow-xl">
+        <li><a hx-get="/home" hx-target="#main-container" hx-swap="innerHTML">Home</a></li>
+        <li><a hx-get="/characters" hx-target="#main-container" hx-swap="innerHTML">Personagens</a></li>
+        <li><a hx-get="/under" hx-target="#main-container" hx-swap="innerHTML">Inventário</a></li>
+    </ul>
+</div>
+{{end}}

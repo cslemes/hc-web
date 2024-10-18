@@ -6,66 +6,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heroes of Cube</title>
-    <link rel="stylesheet" type="text/css" href="/static/styles.css">
-    <script src="https://unpkg.com/htmx.org@1.9.6"></script>
+
+    <script src="https://unpkg.com/htmx.org@2.0.3"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+
+    <script>document.documentElement.setAttribute('data-theme', 'dracula');</script>
+
     <style>
-        body {
-            background-image: url('/static/images/parchment-texture.jpg');
-            /* Medieval parchment background */
-            background-size: cover;
-            background-attachment: fixed;
-            color: #d4d4a4;
-            /* Parchment-like text color */
-            font-family: 'IM Fell English', serif;
-        }
-
-        header {
-            background-color: #333;
-            color: #ffc107;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 4px solid #e0a500;
-        }
-
-        header h1 {
+        .im-fell-english-regular {
+            font-family: "IM Fell English", serif;
+            font-weight: 400;
+            font-style: normal;
             font-size: 3rem;
-            margin: 0;
         }
 
-        footer {
-            background-color: #333;
-            color: #ffc107;
-            padding: 10px;
-            text-align: center;
-            border-top: 4px solid #e0a500;
-            position: absolute;
-            width: 100%;
-            bottom: 0;
+        .im-fell-english-medium {
+            font-family: "IM Fell English", serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 2rem;
         }
 
-        footer p {
-            margin: 0;
-            font-size: 1rem;
-        }
-
-        main {
-            padding: 40px;
-            min-height: calc(100vh - 160px);
-            /* Adjusts for header and footer */
+        .im-fell-english-regular-italic {
+            font-family: "IM Fell English", serif;
+            font-weight: 400;
+            font-style: italic;
         }
     </style>
 </head>
 
 <body>
     <header>
-        <h1>Heroes of Cube</h1>
+        <div class="flex flex-col bg-fuchsia-950">
+            {{ template "header" .}}
+            {{ template "menu" .}}
+        </div>
     </header>
-    <main>
-        {{template "content" .}}
+
+    <div class="container mx-auto my-auto" id="main-container">
+        <div class="flex flex-row " id="home-container" hx-get="/home" hx-trigger="load" hx-swap="outerHTML">
+
+            {{/* {{ template "home" .}} */}}
+
+        </div>
+    </div>
     </main>
-    <footer>
-        <p>&copy; 2023 Heroes of Cube</p>
-    </footer>
+    {{ template "footer" .}}
 </body>
 
 </html>
