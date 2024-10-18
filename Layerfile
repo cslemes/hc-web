@@ -18,4 +18,4 @@ RUN /usr/local/go/bin/go build -o hc_web cmd/main.go
 # Whenever someone clicks the link, we'll load this staging server and forward
 # their requests to it.
 RUN BACKGROUND ./hc_web
-EXPOSE WEBSITE http://localhost:8080
+EXPOSE WEBSITE localhost:8080
