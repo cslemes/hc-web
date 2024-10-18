@@ -5,12 +5,12 @@ FROM vm/ubuntu:18.04
 RUN curl -OL https://golang.org/dl/go1.23.2.linux-amd64.tar.gz
 # Install go
 RUN rm -rf /usr/local/go && tar -C /usr/local -xzf go1.23.2.linux-amd64.tar.gz
-RUN export PATH=$PATH:/usr/local/go/bin
+
 
 COPY . .
 # Create some files
 
-RUN go build -o hc_web cmd/main.go
+RUN /usr/local/go/bin/go build -o hc_web cmd/main.go
 
 
 
