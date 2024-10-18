@@ -7,7 +7,7 @@ FROM vm/ubuntu:18.04
 RUN rm -rf /usr/local/go && tar -C /usr/local -xzf go1.23.2.linux-amd64.tar.gz
 RUN export PATH=$PATH:/usr/local/go/bin
 
-COPY ..
+COPY . .
 # Create some files
 
 RUN go build -o hc_web cmd/main.go
