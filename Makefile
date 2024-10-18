@@ -3,15 +3,7 @@
 # export CGO_ENABLED=0
 
 
-DB_URL=./heroes.db
-
-MIGRATIONS_DIR=./sql/schema
-
-FRONTEND_DIR=./frontend
-
-
-
-.PHONY: all build run clean test deps migrate-up migrate-down migrate-status create-migration generate-sqlc setup-db env build-frontend
+.PHONY: all build run clean test
 
 
 all: build
@@ -55,20 +47,3 @@ watch:
 	    fi; \
 	fi
 
-
-
-generate-sqlc:
-	sqlc generate
-
-migrate-up:
-	goose -dir $(MIGRATIONS_DIR) sqlite3 $(DB_URL) up
-
-migrate-down:
-	goose -dir $(MIGRATIONS_DIR) sqlite3 $(DB_URL) down
-
-migrate-status:
-	goose -dir $(MIGRATIONS_DIR) sqlite3 $(DB_URL) status
-
-create-migration:
-	@read -p "Enter migration name: " name; \
-	goose -dir $(MIGRATIONS_DIR) create $${name} sql

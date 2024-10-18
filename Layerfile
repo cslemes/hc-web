@@ -1,0 +1,20 @@
+#Use an Ubuntu 18.04 base for our staging server
+FROM vm/ubuntu:18.04
+
+# To note: Layerfiles create entire VMs, *not* containers!
+
+# Install go
+RUN rm -rf /usr/local/go && tar -C /usr/local -xzf go1.23.2.linux-amd64.tar.gz
+
+
+COPY ..
+# Create some files
+RUN go build -o hc_web cmd/main.go
+
+
+
+# Expose the webserver in the staging server as a secure link.
+# Whenever someone clicks the link, we'll load this staging server and forward
+# their requests to it.
+RUN BACKGROUND ./hc_web
+EXPOSE WEBSITE http://localhost:8080
